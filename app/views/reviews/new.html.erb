@@ -1,5 +1,7 @@
+<h1>Leave a Review</h1>
 <%= simple_form_for [@restaurant, @review] do |f| %>
   <%= f.input :content %>
   <%= f.input :rating, collection: 0..5  %>
   <%= f.submit %>
 <% end %>
+<%= link_to "Back to restaurant page", restaurant_path(@restaurant) %>

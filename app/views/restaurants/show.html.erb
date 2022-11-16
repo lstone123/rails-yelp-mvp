@@ -4,8 +4,9 @@
 <p><%= @restaurant.category %></p>
 
 <p><%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %></p>
+<p><%= link_to "Back to list of restaurants", restaurants_path %></p>
 
 <ul><% @restaurant.reviews.each do |review| %>
-  <li><%= review.rating %> - <%= review.content %></li>
+  <li><%= "⭐️" * review.rating %> - <%= review.content %></li>
     <% end %>
 </ul>
